@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using QuickBuy.Dominio.Entidades;
 
 namespace QuickBuy.Dominio.Contratos
 {
-    internal interface IUsuarioRepositorio
+    public interface IUsuarioRepositorio : IBaseRepositorio<Usuario>
     {
+
     }
 }
