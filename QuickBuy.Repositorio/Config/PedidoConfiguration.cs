@@ -34,7 +34,9 @@ namespace QuickBuy.Repositorio.Config
                 .HasMaxLength (100);
             builder
                 .Property(pe => pe.NumeroEndereco)
-                .IsRequired()
+                .IsRequired();
+
+            
                 
 
         }
