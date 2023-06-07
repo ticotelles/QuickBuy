@@ -37,7 +37,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\app\nav-menu\nav-menu.component.ts" />
     <None Remove="ClientApp\src\app\produto\produto.components.ts" />
   </ItemGroup>
 
@@ -50,7 +49,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\app\nav-menu\nav-menu.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\produto\produto.components.ts" />
   </ItemGroup>
 
