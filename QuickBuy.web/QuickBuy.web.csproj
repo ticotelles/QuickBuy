@@ -20,16 +20,25 @@
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Compile Remove="ClientApp\src\app\NewFolder1\**" />
+    <Compile Remove="ClientApp\src\app\NewFolder2\**" />
     <Compile Remove="ClientApp\src\app\NewFolder\**" />
     <Content Remove="$(SpaRoot)**" />
     <Content Remove="ClientApp\src\app\NewFolder1\**" />
+    <Content Remove="ClientApp\src\app\NewFolder2\**" />
     <Content Remove="ClientApp\src\app\NewFolder\**" />
     <EmbeddedResource Remove="ClientApp\src\app\NewFolder1\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\NewFolder2\**" />
     <EmbeddedResource Remove="ClientApp\src\app\NewFolder\**" />
     <None Remove="$(SpaRoot)**" />
     <None Remove="ClientApp\src\app\NewFolder1\**" />
+    <None Remove="ClientApp\src\app\NewFolder2\**" />
     <None Remove="ClientApp\src\app\NewFolder\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\nav-menu\nav-menu.component.ts" />
+    <None Remove="ClientApp\src\app\produto\produto.components.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +47,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QuickBuy.Repositorio\QuickBuy.Repositorio.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\nav-menu\nav-menu.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\produto\produto.components.ts" />
   </ItemGroup>
 
   <ItemGroup>
