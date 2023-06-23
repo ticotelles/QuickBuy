@@ -17,11 +17,11 @@ export class LoginComponent {
     this.usuario = new Usuario();
   }
 
-  entrar() {
+ /* entrar() {
     if (this.usuario.email == "tico@teste.com" && this.usuario.senha == "123123") {
       this.usuarioAutenticado = true;
     }
     
   }
-
+  */
 }

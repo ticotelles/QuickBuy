@@ -7,14 +7,19 @@
     <input type="email" id="inputEmail"
            name="email" placeholder="Informe o seu Email"
            class="form-control mb-2"
-           [(ngModel)]="usuario.email"
            #email="ngModel"
+           [ngClass]="{
+            'is-invalid': email.invalid && (email.dirty || email.touched),
+            'is-valid': email.valid && (email.dirty || email.touched)
+           }"
+           [(ngModel)]="usuario.email"
            email
            required/>
-    <div class="aler alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+
+    <div class="invalid-feedback mb-2" *ngIf="email.invalid && (email.dirty || email.touched)">
 
       <div *ngIf="email.errors.required">
-        Email de preenchimento obrigatorio
+        Email é de preenchimento obrigatório
       </div>
       <div *ngIf="email.errors.email">
         Email nao esta no formato correto
@@ -26,10 +31,15 @@
     <input type="password" id="inputPassword"
            name="senha" placeholder="Digite a Senha"
            class="form-control mb-3"
-           [(ngModel)]="usuario.senha"
            #senha="ngModel"
+           [ngClass]="{
+            'is-invalid': senha.invalid && (senha.dirty || senha.touched),
+            'is-valid': senha.valid && (senha.dirty || senha.touched)
+           }"
+           [(ngModel)]="usuario.senha"
+           
            required/>
-    <div class="alert-danger alert-danger" *ngIf="senha.invalid && (senha.dirty || senha.touched)">
+    <div class="invalid-feedback mb-2" *ngIf="senha.invalid && (senha.dirty || senha.touched)">
 
         <div *ngIf="senha.errors.required">
           Senha de preenchimento obrigatorio
