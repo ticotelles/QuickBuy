@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Usuario } from "../../modelo/usuario";
+import { ActivatedRoute, Router } from "@angular/router";
 
 
 @Component({
@@ -10,18 +11,19 @@ import { Usuario } from "../../modelo/usuario";
 export class LoginComponent {
 
   public usuario;
-  
+  public returnUrl: string;
 
-
-  constructor() {
+  constructor(private router: Router, private activatedRouter: ActivatedRoute) { 
     this.usuario = new Usuario();
+    this.returnUrl= this.activatedRouter.snapshot.queryParams['returnUrl']
   }
 
- /* entrar() {
+  entrar() {
     if (this.usuario.email == "tico@teste.com" && this.usuario.senha == "123123") {
-      this.usuarioAutenticado = true;
+      sessionStorage.setItem("usuario-autenticado", "1");
+      this.router.navigate([this.returnUrl]);
     }
     
   }
-  */
+  
 }
